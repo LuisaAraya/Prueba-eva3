@@ -6,9 +6,57 @@
     <title>FORMULARIO</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script type="module" src="assents/js/script.js"></script>
 </head>
 <body>
-    
+    <fieldset>
+        <legend> ¿QUIERES MAS INFORMACION?</legend>
+            <form>
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required><br>
+                
+                <label for="apellido">Apellido: </label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required><br>
+                
+                <label for="fechaNacimiento">Fecha de Nacimiento: </label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br>
+
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" placeholder="Ingrese un correo" required><br>
+
+                <label for="telefono">Telefono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="9XXXXXXXX"><br>
+
+                <p>Seleccione tipo de Plata: </p>
+                <input type="checkbox" id="italiana" name="italiana" value="italiana">
+                <label for="italiana"> PLATA ITALIANA</label><br>
+                <input type="checkbox" id="francesa" name="francesa" value="francesa">
+                <label for="francesa"> PLATA FRANCESA</label><br>
+
+                <p>Seleccione tipo de Joya: </p>
+                <input type="checkbox" id="collar" name="collar" value="collar">
+                <label for="collar"> COLLAR</label><br>
+                <input type="checkbox" id="anillo" name="anillo" value="anillo">
+                <label for="anillo"> ANILLO</label><br><br>
+
+                <label >Deje un comentario (Opcional)</label><br>
+                <textarea id="mensaje"></textarea><br>
+                <button type="button" id="btnRegistrar">Registrar</button>
+            </form>
+    </fieldset>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>FechaNacimiento</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                <th>T-Plata</th>
+                <th>T-Joya</th>
+                <th>Comentario</th>
+            </tr>
+        </thead>
+    </table>
 </body>
 </html>
