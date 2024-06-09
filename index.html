@@ -5,45 +5,58 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>FORMULARIO</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script type="module" src="assents/js/script.js"></script>
+    <link href="/assents/css.css">
+    <script type="module" src="/js/script.js"></script>
+    
 </head>
 <body>
     <fieldset>
         <legend> ¿QUIERES MAS INFORMACION?</legend>
-            <form>
-                <label for="nombre">Nombre: </label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required><br>
+            <form class="needs-validation" novalidate>
                 
-                <label for="apellido">Apellido: </label>
-                <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required><br>
-                
-                <label for="fechaNacimiento">Fecha de Nacimiento: </label>
-                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br>
+                    <label for="UPDnombre">Nombre: </label>
+                    <input type="text" min="5" id="UPDnombre" name="UPDnombre" placeholder="Ingrese su nombre" ><br>
 
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" name="correo" placeholder="Ingrese un correo" required><br>
+                    <label for="UPDapellido">Apellido: </label>
+                    <input type="text" id="UPDapellido" name="UPDapellido" placeholder="Ingrese su apellido" ><br>
+                    
+                    <label for="UPDfechaNacimiento">Fecha de Nacimiento: </label>
+                    <input type="date" id="UPDfechaNacimiento" name="UPDfechaNacimiento" ><br>
 
-                <label for="telefono">Telefono:</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="9XXXXXXXX"><br>
+                    <label for="UPDcorreo">Correo:</label>
+                    <input type="email" id="UPDcorreo" name="UPDcorreo" placeholder="Ingrese un correo" ><br>
 
-                <p>Seleccione tipo de Plata: </p>
-                <input type="checkbox" id="italiana" name="italiana" value="italiana">
-                <label for="italiana"> PLATA ITALIANA</label><br>
-                <input type="checkbox" id="francesa" name="francesa" value="francesa">
-                <label for="francesa"> PLATA FRANCESA</label><br>
+                    <label for="UPDtelefono">Telefono:</label>
+                    <input type="tel" id="UPDtelefono" name="UPDtelefono" placeholder="9XXXXXXXX"><br>
 
-                <p>Seleccione tipo de Joya: </p>
-                <input type="checkbox" id="collar" name="collar" value="collar">
-                <label for="collar"> COLLAR</label><br>
-                <input type="checkbox" id="anillo" name="anillo" value="anillo">
-                <label for="anillo"> ANILLO</label><br><br>
+                    <label for="UPDmensaje">Deje un comentario (Opcional):</label><br>
+                    <textarea id="UPDmensaje"></textarea><br>
 
-                <label >Deje un comentario (Opcional)</label><br>
-                <textarea id="mensaje"></textarea><br>
-                <button type="button" id="btnRegistrar">Registrar</button>
+                    <fieldset>
+                        <div>
+                            <legend>ELIGA LA O LAS JOYAS</legend>
+                            <p>Tipo de plata:</p>
+                            <input type="checkbox" id="UPDitaliana" name="UPDitaliana" value="UPDitaliana">
+                            <label for="UPDitaliana">ITALIANA </label><br>
+    
+                            <input type="checkbox" id="UPDfrancesa" name="UPDfrancesa" value="UPDfrancesa">
+                            <label for="UPDfrancesa">FRANCESA </label><br><br><br>
+                        </div>
+
+                        <label>Tipo de joya:</label>
+                        <select>
+                            <option value="UPDcollar" id="UPDcollar">COLLAR</option>
+                            <option value="UPDanillo" id="UPDanillo">ANILLO</option>
+                            <option value="UPDaro" id="UPDaro">ARO</option>
+                        </select>
+                        <br><br>
+                    </fieldset> <br>
+                    
+                    <button type="button" id="btnRegistrar">Registrar</button>
+                    <button type="button" id="btnActualizar">Actualizar</button>
             </form>
     </fieldset>
+    
     <table>
         <thead>
             <tr>
@@ -52,11 +65,12 @@
                 <th>FechaNacimiento</th>
                 <th>Correo</th>
                 <th>Telefono</th>
-                <th>T-Plata</th>
-                <th>T-Joya</th>
-                <th>Comentario</th>
+                <th>Mensaje</th>
+                <th>tJoya</th>
+                <th>tPlata</th>
             </tr>
         </thead>
+        <tbody id="tbDatos"></tbody>
     </table>
 </body>
 </html>
